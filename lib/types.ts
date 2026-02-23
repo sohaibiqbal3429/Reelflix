@@ -1,41 +1,37 @@
-export type Genre = 'Drama' | 'Action' | 'Romance' | 'Thriller' | 'Comedy' | 'Mystery';
+export interface Category {
+  id: string;
+  name?: string;
+  label?: string;
+}
 
 export interface Show {
   id: string;
   title: string;
-  language: string;
-  genres: Genre[];
-  views: string;
-  posterUrl: string;
-  backdropUrl: string;
-  isNew?: boolean;
-  tagLine: string;
-  about: string;
-  rating: string;
-  timeLeft?: string;
-  releaseCountdown?: string;
-  isSeries?: boolean;
+  description: string;
+  category: string;
+  tags: string[];
+  videoUrl: string;
+  thumbnailUrl: string;
+  bannerUrl?: string;
+  sections: string[];
+  status: string;
+  views: number;
+  watchMinutes: number;
 }
 
-export interface Reel {
-  id: string;
-  showId: string;
-  title: string;
-  duration: string;
-}
-
-export interface Category {
-  id: string;
-  label: string;
+export interface HomePayload {
+  featured: Show[];
+  trending: Show[];
+  topRanked: Show[];
+  comingSoon: Show[];
+  categories: Category[];
 }
 
 export interface UserProgress {
-  showId: string;
-  progress: number;
-  leftLabel: string;
-}
-
-export interface NotificationRequest {
-  showId: string;
-  enabled: boolean;
+  id?: string;
+  deviceId: string;
+  contentId: string;
+  positionSec: number;
+  durationSec: number;
+  updatedAt?: string;
 }

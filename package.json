@@ -7,10 +7,15 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:seed": "npm --prefix backend run seed",
+    "admin:dev": "npm --prefix admin-panel run dev"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "1.23.1",
     "expo": "~52.0.0",
+    "expo-av": "~15.0.1",
     "expo-linear-gradient": "~14.0.1",
     "expo-router": "~4.0.0",
     "expo-status-bar": "~2.0.0",
