@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "ReelFlix",
+    "slug": "reelflix",
+    "scheme": "reelflix",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#090A10"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
